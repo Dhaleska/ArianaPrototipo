@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Seguimiento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="img/logo.png" alt="Multiservicios Ariana">
+        </div>
+
+        <nav class="menu">
+            <a href="registro.html" class="menu-item">
+                <i class="fa-solid fa-pen"></i>
+                Registro
+            </a>
+
+            <a href="seguimiento.html" class="menu-item active">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Seguimiento
+            </a>
+
+            <a href="historial.html" class="menu-item">
+                <i class="fa-solid fa-file-lines"></i>
+                Historial
+            </a>
+
+            <a href="notificacion.html" class="menu-item">
+                <i class="fa-solid fa-bell"></i>
+                Notificación
+            </a>
+
+            <a href="servicios.html" class="menu-item">
+                <i class="fa-solid fa-plus"></i>
+                Servicios
+            </a>
+
+            <a href="personal.html" class="menu-item">
+                <i class="fa-solid fa-user"></i>
+                Personal
+            </a>
+
+            <a href="clientes.html" class="menu-item">
+                <i class="fa-solid fa-users"></i>
+                Cliente
+            </a>
+
+            <a href="reporte.html" class="menu-item">
+                <i class="fa-solid fa-chart-column"></i>
+                Reportes
+            </a>
+        </nav>
+
+    </aside>
+
+
+    <!-- CONTENIDO -->
+    <main class="content">
+
+        <!-- Header del contenido -->
+        <div class="content-header seguimiento-header">
+
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+            <div class="header-center"></div>
+                <h2>SEGUIMIENTO ACTIVIDADES</h2>
+
+                <div class="filter-bar">
+                    <label>Mes / Año</label>
+                    <input type="month" value="2025-09">
+                </div>
+            </div>
+        </div>
+
+        <div class="user-info">
+            <span>Juan Carlos</span>
+            <div class="user-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+        </div>
+    
+    
+
+            <!-- Tabla -->
+        <div class="table-container">
+            <table class="tracking-table">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Cliente</th>
+                        <th>Encargado</th>
+                        <th>Servicio</th>
+                        <th>Prioridad</th>
+                        <th>Estado Servicio</th>
+                        <th>Estado Tiempo</th>
+                        <th>Tiempo Transcurrido</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>0001</td>
+                        <td>Luis Peralta</td>
+                        <td>Fidel Ruiz</td>
+                        <td>Mantenimiento</td>
+                        <td>Baja</td>
+                        <td class="estado pendiente">Pendiente</td>
+                        <td>En plazo</td>
+                        <td>-</td>
+                    </tr>
+
+                    <tr>
+                        <td>0002</td>
+                        <td>Sonia Cifuente</td>
+                        <td>Fidel Ruiz</td>
+                        <td>Drywall</td>
+                        <td>Alta</td>
+                        <td class="estado proceso">En proceso</td>
+                        <td>Por vencer</td>
+                        <td>3 días</td>
+                    </tr>
+
+                    <tr>
+                        <td>0003</td>
+                        <td>Nicol Vargas</td>
+                        <td>Cesar Aguilar</td>
+                        <td>Pintura</td>
+                        <td>Media</td>
+                        <td class="estado vencido">En proceso</td>
+                        <td>Vencido</td>
+                        <td>7 días</td>
+                    </tr>
+
+                    <tr>
+                        <td>0004</td>
+                        <td>José Flores</td>
+                        <td>Heber Quispe</td>
+                        <td>Electricidad</td>
+                        <td>Baja</td>
+                        <td class="estado finalizado">Finalizado</td>
+                        <td>En plazo</td>
+                        <td>6 hr</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".sidebar").classList.toggle("show");
+        }
+
+    </script>
+
+</body>
+</html>

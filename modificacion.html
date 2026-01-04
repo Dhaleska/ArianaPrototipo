@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Modificacion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="img/logo.png" alt="Multiservicios Ariana">
+        </div>
+
+        <nav class="menu">
+            <a href="registro.html" class="menu-item active">
+                <i class="fa-solid fa-pen"></i>
+                Registro
+            </a>
+
+            <a href="seguimiento.html" class="menu-item">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Seguimiento
+            </a>
+
+            <a href="historial.html" class="menu-item">
+                <i class="fa-solid fa-file-lines"></i>
+                Historial
+            </a>
+
+            <a href="notificacion.html" class="menu-item">
+                <i class="fa-solid fa-bell"></i>
+                Notificación
+            </a>
+
+            <a href="servicios.html" class="menu-item">
+                <i class="fa-solid fa-plus"></i>
+                Servicios
+            </a>
+
+            <a href="personal.html" class="menu-item">
+                <i class="fa-solid fa-user"></i>
+                Personal
+            </a>
+
+            <a href="clientes.html" class="menu-item">
+                <i class="fa-solid fa-users"></i>
+                Cliente
+            </a>
+
+            <a href="reporte.html" class="menu-item">
+                <i class="fa-solid fa-chart-column"></i>
+                Reportes
+            </a>
+        </nav>
+
+    </aside>
+
+    <main class="content">
+
+        <!-- Header del contenido -->
+        <div class="content-header">
+
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+            <div class="user-info">
+                <span class="username">Juan Carlos</span>
+                <div class="user-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabla-container">
+
+            <h2 class="tabla-title">MODIFICACIÓN DE REGISTRO</h2>
+
+            <div class="tabla-scroll">              
+                
+                <div class="excel-filter" id="excelFilter">
+                    <div class="filter-header">
+                        <span>Filtrar</span>
+                        <i class="fa-solid fa-xmark" onclick="closeFilter()"></i>
+                    </div>
+
+                    <div class="filter-search">
+                        <input type="text" placeholder="Buscar valor...">
+                    </div>
+
+                    <div class="filter-options" id="filterOptions"></div>
+
+                    <div class="filter-actions">
+                        <button class="btn-clear" onclick="clearFilter()">Limpiar</button>
+                        <button class="btn-apply" onclick="applyFilter()">Aplicar</button>
+                    </div>
+                </div>
+
+                <table class="tabla-registro">
+
+                    <thead>
+                        <tr>
+                            <th>
+                                Código
+                                <i class="fa-solid fa-magnifying-glass filter-icon"></i>
+                            </th>
+                            <th>
+                                Nombre del registro
+                                <i class="fa-solid fa-magnifying-glass filter-icon"></i>
+                            </th>
+                            <th>
+                                Servicio
+                                <i class="fa-solid fa-magnifying-glass filter-icon"></i>
+                            </th>
+                            <th>
+                                Tiempo
+                                <i class="fa-solid fa-magnifying-glass filter-icon"></i>
+                            </th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>0001</td>
+                            <td>———</td>
+                            <td>Mantenimiento</td>
+                            <td>2 días</td>
+                            <td>
+                                <button class="icon-btn edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                            </td>
+                            <td>
+                                <button class="icon-btn delete">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>0002</td>
+                            <td>———</td>
+                            <td>Drywall</td>
+                            <td>3 días</td>
+                            <td>
+                                <button class="icon-btn edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                            </td>
+                            <td>
+                                <button class="icon-btn delete">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <!-- Más filas aquí -->
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <a href="registro.html" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+
+        </div>
+
+    </main>
+
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <h3>Editar registro</h3>
+
+            <input type="text" placeholder="Nombre del registro">
+            <input type="text" placeholder="Servicio">
+            <input type="text" placeholder="Tiempo">
+
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="closeEditModal()">Cancelar</button>
+                <button class="btn-save">Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".sidebar").classList.toggle("show");
+        }
+
+        // FILTRO
+        const filterIcons = document.querySelectorAll(".filter-icon");
+        const filterBox = document.getElementById("filterBox");
+
+        filterIcons.forEach(icon => {
+            icon.addEventListener("click", () => {
+                filterBox.style.display =
+                    filterBox.style.display === "block" ? "none" : "block";
+            });
+        });
+
+        // ELIMINAR
+        const deleteButtons = document.querySelectorAll(".icon-btn.delete");
+        deleteButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                if (confirm("¿Estás seguro de eliminar este registro?")) {
+                    btn.closest("tr").remove();
+                }
+            });
+        });
+
+        let currentColumnIndex = null;
+
+        const excelFilter = document.getElementById("excelFilter");
+        const filterOptions = document.getElementById("filterOptions");
+        const table = document.querySelector(".tabla-registro tbody");
+
+        // ABRIR FILTRO
+        document.querySelectorAll(".filter-icon").forEach((icon, index) => {
+            icon.addEventListener("click", (e) => {
+                currentColumnIndex = index;
+                openFilter(index, e);
+            });
+        });
+
+        function openFilter(colIndex, event) {
+            filterOptions.innerHTML = "";
+
+            const values = new Set();
+
+            table.querySelectorAll("tr").forEach(row => {
+                values.add(row.children[colIndex].innerText);
+            });
+
+            values.forEach(value => {
+                const label = document.createElement("label");
+                label.innerHTML = `
+                    <input type="checkbox" value="${value}" checked>
+                    ${value}
+                `;
+                filterOptions.appendChild(label);
+            });
+
+            excelFilter.style.display = "block";
+            excelFilter.style.top = event.pageY + "px";
+            excelFilter.style.left = event.pageX + "px";
+        }
+
+        function closeFilter() {
+            excelFilter.style.display = "none";
+        }
+
+        // APLICAR FILTRO
+        function applyFilter() {
+            const checkedValues = [...filterOptions.querySelectorAll("input:checked")]
+                .map(cb => cb.value);
+
+            table.querySelectorAll("tr").forEach(row => {
+                const cellValue = row.children[currentColumnIndex].innerText;
+                row.style.display = checkedValues.includes(cellValue) ? "" : "none";
+            });
+
+            closeFilter();
+        }
+
+        // LIMPIAR FILTRO
+        function clearFilter() {
+            table.querySelectorAll("tr").forEach(row => {
+                row.style.display = "";
+            });
+            closeFilter();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    </script>
+
+
+</body>
+</html>

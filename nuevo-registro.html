@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo Registro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="img/logo.png" alt="Multiservicios Ariana">
+        </div>
+
+        <nav class="menu">
+            <a href="registro.html" class="menu-item active">
+                <i class="fa-solid fa-pen"></i>
+                Registro
+            </a>
+
+            <a href="seguimiento.html" class="menu-item">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Seguimiento
+            </a>
+
+            <a href="historial.html" class="menu-item">
+                <i class="fa-solid fa-file-lines"></i>
+                Historial
+            </a>
+
+            <a href="notificacion.html" class="menu-item">
+                <i class="fa-solid fa-bell"></i>
+                Notificación
+            </a>
+
+            <a href="servicios.html" class="menu-item">
+                <i class="fa-solid fa-plus"></i>
+                Servicios
+            </a>
+
+            <a href="personal.html" class="menu-item">
+                <i class="fa-solid fa-user"></i>
+                Personal
+            </a>
+
+            <a href="clientes.html" class="menu-item">
+                <i class="fa-solid fa-users"></i>
+                Cliente
+            </a>
+
+            <a href="reporte.html" class="menu-item">
+                <i class="fa-solid fa-chart-column"></i>
+                Reportes
+            </a>
+        </nav>
+
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main class="content">
+
+        <!-- Header del contenido -->
+        <div class="content-header">
+
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+            <span class="code">CÓDIGO: N0001</span>
+
+            <div class="user-info">
+                <span class="username">Juan Carlos</span>
+                <div class="user-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+        </div>
+
+        <form class="registro-form">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Nombre Registro</label>
+                    <input type="text" placeholder="Nombre del registro*">
+                </div>
+
+                <div class="form-group">
+                    <label>Cliente</label>
+                    <input type="text" placeholder="Nombre del cliente*">
+                </div>
+
+                <div class="form-group">
+                    <label>Fecha Inicio</label>
+                    <input type="date">
+                </div>
+
+                <div class="form-group">
+                    <label>Fecha Fin</label>
+                    <input type="date">
+                </div>
+
+                <div class="form-group">
+                    <label>Duración</label>
+                    <input type="text" placeholder="Duración*">
+                </div>
+
+                <div class="form-group with-button">
+                    <label>Tipo de Servicio</label>
+                    <select required>
+                        <option value="" selected disabled>Nombre del servicio*</option>
+                    </select>
+                    <button type="button" class="add-btn">+</button>
+                </div>
+
+                <div class="form-group">
+                    <label>Prioridad</label>
+                    <select required>
+                        <option value="" selected disabled>Prioridad*</option>
+                        <option value="Alta">Alta</option>
+                        <option value="Media">Media</option>
+                        <option value="Baja">Baja</option>
+                    </select>
+                </div>
+
+                <div class="form-group with-button">
+                    <label>Trabajador</label>
+                    <select required>
+                        <option value="" selected disabled>Nombre del trabajador*</option>
+                    </select>
+                    <button type="button" class="add-btn">+</button>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Descripción del servicio</label>
+                    <textarea placeholder="Comentario / Observación*"></textarea>
+                </div>
+
+            </div>
+
+            <!-- ACCIONES -->
+            <div class="form-actions">
+                <a href="registro.html" class="back-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+
+                <button type="submit" class="save-btn">
+                    Guardar
+                </button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".sidebar").classList.toggle("show");
+        }
+    </script>
+
+</body>
+</html>

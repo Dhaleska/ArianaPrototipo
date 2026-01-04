@@ -1,0 +1,989 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fondo */
+body {
+    height: 100vh;
+    background: url("img/Fondo login.png") no-repeat center center/cover;
+}
+
+/* Contenedor principal */
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+}
+
+/* Tarjeta de login */
+.login-card {
+    background: #f2f2f2;
+    width: 320px;
+    padding: 30px 25px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Título */
+.login-card h2 {
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    color: #1f3b4d;
+}
+
+/* Inputs */
+.login-card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: none;
+    background: #e6e6e6;
+    border-radius: 3px;
+}
+
+/* Botón */
+.login-card button {
+    width: 100%;
+    padding: 10px;
+    background: #f1c40f;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-card button:hover {
+    background: #d4ac0d;
+}
+
+/* Link */
+.forgot {
+    display: block;
+    margin-top: 15px;
+    font-size: 12px;
+    color: #555;
+    text-decoration: none;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+.menu-btn {
+    display: flex;
+    flex-direction: column;   /* ícono arriba, texto abajo */
+    align-items: center;      /* centra horizontalmente */
+    justify-content: center;
+    gap: 8px;                 /* espacio entre ícono y texto */
+    text-align: center;
+}
+
+
+/* ===== PRINCIPAL ===== */
+
+.principal-body {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url("img/fondo logo.png") no-repeat center center/cover;
+    color: white;
+    text-align: center;
+}
+
+/* Header */
+.principal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+}
+
+.principal-header .title {
+    text-align: center;
+    font-size: 26px;
+    margin-top: 35px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 30px;
+}
+
+.username {
+    font-weight: 500;
+}
+
+.user-icon {
+    background: white;
+    color: black;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main */
+.principal-main {
+    display: flex;
+    justify-content: center;
+    margin-top: 125px;
+}
+
+/* Grid de botones */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 140px);
+    gap: 25px;
+}
+
+/* Botones del menú */
+.menu-btn {
+    height: 110px;
+    background: rgba(255,255,255,0.25);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.menu-btn span {
+    font-size: 14px;
+}
+
+.menu-btn:hover {
+    background: rgba(255,255,255,0.4);
+    transform: translateY(-5px);
+}
+
+/* Footer */
+.principal-footer {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+}
+
+/* BOTÓN CERRAR SESIÓN */
+.logout-btn {
+    background: #f1c40f;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.logout-btn:visited {
+    color: #1e293b;
+}
+
+.logout-btn:hover {
+    background: #d4ac0d;
+    text-decoration: none;
+}
+
+.menu-btn {
+    text-decoration: none;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablets */
+@media (max-width: 900px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 140px);
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .menu-grid {
+        grid-template-columns: repeat(1, 160px);
+    }
+
+    .dashboard-main {
+        margin-top: 30px;
+    }
+
+    .logout-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+/* ===== LAYOUT GENERAL ===== */
+.layout {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 240px;
+    background: #111827;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.logo {
+    padding: 20px;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu-item:hover {
+    background: #374151;
+}
+
+.menu-item.active {
+    background: #e5e7eb;
+    color: #111827;
+    font-weight: bold;
+}
+
+/* ===== CONTENIDO ===== */
+.content {
+    flex: 1;
+    background: #f9fafb;
+    padding: 30px 40px;
+}
+
+/* Header contenido */
+.content-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 15px 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.content-header h2 {
+    letter-spacing: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    margin-top: 130px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    gap: 10px;
+}
+
+.user-icon {
+    background: #111827;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== PRINCIPAL - OPCIONES ===== */
+.options {
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    gap: 100px;
+}
+
+.option-card {
+    width: 140px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+}
+
+.option-icon {
+    width: 80px;
+    height: 80px;
+    background: #1e293b;
+    color: #fff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.option-icon:hover {
+    background: #16306d;
+    transform: scale(1.08);
+}
+
+.option-card span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ===== BOTÓN MENÚ ===== */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* ===== RESPONSIVE SIDEBAR ===== */
+@media (max-width: 768px) {
+
+    .sidebar {
+        position: fixed;
+        left: -230px;
+        top: 0;
+        height: 100%;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .options {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 60px;
+    }
+}
+
+/* ===== ICONOS ===== */
+.menu-item i {
+    width: 20px;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+    /*Iconos de seguimiento*/
+.option-icon i {
+    font-size: 42px;
+    color: white;
+}
+
+
+/*-------------------------------------------------------------------------*/
+/* ===== NUEVO REGISTRO ===== */
+
+.code {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.registro-form {
+    margin-top: 40px;
+    max-width: 1100px;
+    width: 97%;
+}
+
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 40px;
+}
+
+/* Campos */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #111827;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 10px 12px;
+    font-size: 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 90px;
+}
+
+/* Campo con botón + */
+.with-button { 
+    position: relative;
+}
+
+.add-btn {
+    position: absolute;
+    right: -38px;
+    top: 50%;
+    transform: translateY(-15%);
+    width: 25px;
+    height: 28px;
+    border: none;
+    background: #111827;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Campo ancho */
+.full-width {
+    grid-column: 1 / 3;
+}
+
+/* Acciones */
+.form-actions {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-btn {
+    font-size: 20px;
+    color: #111827;
+    text-decoration: none;
+}
+
+.save-btn {
+    padding: 8px 28px;
+    background-color: #111827;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+select {
+    color: #9ca3af; /* gris placeholder */
+}
+
+select:focus {
+    color: #111827;
+}
+
+select:valid {
+    color: #111827; /* negro cuando hay selección */
+}
+
+
+
+/* ===== RESPONSIVE FORMULARIO ===== */
+
+@media (max-width: 900px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .full-width {
+        grid-column: 1;
+    }
+
+    .add-btn {
+        right: 10px;
+        top: 36px;
+    }
+
+    .registro-form {
+        padding-right: 40px;
+        max-width: 900px;
+        margin: 0 auto; /* 👈 centra horizontalmente */
+    }
+}
+
+@media (max-width: 600px) {
+
+    .content-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    .save-btn {
+        width: 100%;
+    }
+
+    .back-btn {
+        align-self: flex-start;
+    }
+}
+
+/*-------------------------------------------------------------------------*/
+/* ===== MODIFICACION ===== */
+
+.tabla-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.tabla-title {
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+/* CONTENEDOR CON SCROLL */
+.tabla-scroll {
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+/* TABLA */
+
+.tabla-registro {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+/* CABECERA */
+.tabla-registro thead th {
+    background: #d9d9d9;
+    padding: 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+/* FILTROS */
+.tabla-registro thead input {
+    width: 100%;
+    margin-top: 5px;
+    padding: 4px;
+    font-size: 12px;
+}
+
+/* FILAS */
+.tabla-registro tbody tr {
+    background: #f4f4f4;
+}
+
+/* CELDAS */
+.tabla-registro td {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* BOTONES */
+.icon-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.icon-btn.edit {
+    color: #1e293b;
+}
+
+.icon-btn.delete {
+    color: #b91c1c;
+}
+
+.icon-btn:hover {
+    transform: scale(1.1);
+}
+
+.filter-icon {
+    margin-left: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #374151;
+}
+
+.filter-icon:hover {
+    color: #111827;
+}
+
+.excel-filter {
+    position: absolute;
+    width: 260px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    padding: 12px;
+    display: none;
+    z-index: 2000;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.filter-header i {
+    cursor: pointer;
+    color: #666;
+}
+
+/* SEARCH */
+.filter-search input {
+    width: 100%;
+    padding: 6px 8px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+/* OPTIONS */
+.filter-options {
+    max-height: 160px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.filter-options label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    padding: 4px 0;
+    cursor: pointer;
+}
+
+/* ACTIONS */
+.filter-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.btn-clear {
+    background: transparent;
+    border: 1px solid #ccc;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-apply {
+    background: #1e293b;
+    color: #fff;
+    border: none;
+    padding: 4px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 320px;
+    border-radius: 8px;
+}
+
+.modal-content input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+    /*RESPONSIVE*/
+@media (max-width: 768px) {
+    .tabla-scroll {
+        overflow-x: auto;
+    }
+
+    .tabla-registro {
+        min-width: 800px;
+    }
+}
+
+/*-------------------------------------------------------------------------*/
+/* ===== SEGUIMIENTO ===== */
+
+.seguimiento-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+/* BLOQUE CENTRAL (H2 + FILTRO) */
+.seguimiento-header .header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.seguimiento-header .header-center h2 {
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* FILTRO */
+.seguimiento-header .filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.seguimiento-header .filter-bar label {
+    font-size: 14px;
+}
+
+.seguimiento-header .filter-bar input {
+    padding: 5px 10px;
+}
+
+.table-container {
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+/* TABLA */
+.tracking-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+/* CABECERA */
+.tracking-table th {
+    background: #d9d9d9;
+    padding: 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+/* FILAS */
+.tracking-table tbody tr {
+    background: #f4f4f4;
+}
+
+/* CELDAS */
+.tracking-table td {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.estado {
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.estado.proceso {
+    background: #facc15;
+}
+
+.estado.vencido {
+    background: #ef4444;
+    color: #fff;
+}
+
+.estado.finalizado {
+    background: #a3e635;
+}
+/* Gris */
+.estado.pendiente {
+    background: #e5e7eb;
+}
+
+
+/*-------------------------------------------------------------------------*/
+/* ===== SERVICIOS ===== */
+
+.servicios-layout {
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.content-header h2 {
+    letter-spacing: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    margin-top: 100px;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* FORMULARIO */
+.servicios-form {
+    width: 260px;
+    margin-top: 10px;
+}
+
+.servicios-form input,
+.servicios-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+.servicios-form button {
+    width: 120px;
+    padding: 8px;
+    background: #0b2a3a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* TABLA */
+.servicios-table-wrapper {
+    flex: 1;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* TABLA ESTILO UNIFICADO */
+.tracking-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.tracking-table thead th {
+    background: #d9d9d9;
+    padding: 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.tracking-table tbody tr {
+    background: #f4f4f4;
+}
+
+.tracking-table td {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ESTADO SIN COLORES */
+.servicio-estado {
+    background: none;
+    color: #000;
+    padding: 0;
+    font-weight: normal;
+}
+
+/* ACCIONES */
+.btn-editar {
+    margin-right: 30px;
+}
+
+.btn-editar,
+.btn-eliminar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+
