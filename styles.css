@@ -335,17 +335,57 @@ body {
     align-items: center;
 }
 
+/* ===== PRINCIPAL - OPCIONES ===== */
+.options {
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    gap: 100px;
+}
 
+.option-card {
+    width: 140px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+}
 
+.option-icon {
+    width: 80px;
+    height: 80px;
+    background: #1e293b;
+    color: #fff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
 
+.option-icon:hover {
+    background: #16306d;
+    transform: scale(1.08);
+}
 
+.option-card span {
+    font-size: 14px;
+    font-weight: 500;
+}
 
-
-
-
-
-
-
+/* ===== BOTÓN MENÚ ===== */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
 
 /* ===== RESPONSIVE SIDEBAR ===== */
 @media (max-width: 768px) {
@@ -758,89 +798,94 @@ select:valid {
 /* ===== SEGUIMIENTO ===== */
 
 .seguimiento-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
     padding: 20px 30px;
 }
 
-/* Usuario en la esquina superior derecha */
-.seguimiento-user {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.seguimiento-user span {
-    font-weight: 500;
-    color: #333;
-}
-
-.user-icon {
-    width: 35px;
-    height: 35px;
-    background-color: #4a90e2;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
-/* Título y filtro centrados */
-.seguimiento-header-center {
+/* BLOQUE CENTRAL (H2 + FILTRO) */
+.seguimiento-header .header-center {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
 }
 
-.seguimiento-header-center h2 {
+.seguimiento-header .header-center h2 {
     margin: 0;
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
-/* Filtro */
-.seguimiento-filter-bar {
+/* FILTRO */
+.seguimiento-header .filter-bar {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.seguimiento-filter-bar label {
+.seguimiento-header .filter-bar label {
     font-size: 14px;
 }
 
-.seguimiento-filter-bar input {
-    padding: 6px 10px;
+.seguimiento-header .filter-bar input {
+    padding: 5px 10px;
 }
 
-/* ===============================
-   SEGUIMIENTO - TABLA
-================================ */
-
-.seguimiento-table-container {
-    margin-top: 20px;
-    padding: 0 30px 30px;
+.table-container {
     max-height: 420px;
     overflow-y: auto;
 }
 
-.seguimiento-table thead input {
+/* TABLA */
+.tracking-table {
     width: 100%;
-    margin-top: 5px;
-    padding: 4px;
-    font-size: 12px;
-    border: 1px solid #ccc;
+    border-collapse: separate;
+    border-spacing: 0 10px;
 }
 
+/* CABECERA */
+.tracking-table th {
+    background: #d9d9d9;
+    padding: 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
 
+/* FILAS */
+.tracking-table tbody tr {
+    background: #f4f4f4;
+}
 
+/* CELDAS */
+.tracking-table td {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
 
+.estado {
+    font-weight: 500;
+    border-radius: 4px;
+}
 
+.estado.proceso {
+    background: #facc15;
+}
 
+.estado.vencido {
+    background: #ef4444;
+    color: #fff;
+}
 
-
+.estado.finalizado {
+    background: #a3e635;
+}
+/* Gris */
+.estado.pendiente {
+    background: #e5e7eb;
+}
 
 /*-------------------------------------------------------------------------*/
 /* ===== SERVICIOS ===== */
