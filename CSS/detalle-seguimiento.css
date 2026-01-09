@@ -1,0 +1,181 @@
+/* ===== BARRA SUPERIOR ===== */
+.detalle-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    margin-bottom: 20px;
+}
+
+/* ===== TÍTULO ===== */
+.detalle-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #111827;
+    margin: 0 0 15px 0;
+}
+
+/* ===== CÓDIGO ===== */
+.detalle-codigo {
+    text-align: center;
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0 0 30px 0;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.detalle-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* ===== GRID DE INFORMACIÓN ===== */
+.detalle-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 30px;
+    margin-bottom: 40px;
+}
+
+.detalle-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.detalle-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #271115;
+    margin-bottom: 6px;
+}
+
+.detalle-field input,
+.detalle-field textarea {
+    padding: 10px 12px;
+    border: 1px solid #dbd1d1;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #271114;
+    background: white;
+}
+
+.detalle-field input:read-only,
+.detalle-field textarea:read-only {
+    background: #fbf9f9;
+    cursor: default;
+}
+
+.detalle-field textarea {
+    resize: none;
+    min-height: 80px;
+}
+
+/* Campo de ancho completo */
+.detalle-field-full {
+    grid-column: 1 / -1;
+}
+
+/* ===== HISTORIAL DE ACTIVIDADES ===== */
+.detalle-historial {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #ebe5e5;
+}
+
+.detalle-historial-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #271115;
+    margin-bottom: 25px;
+}
+
+/* ===== ACTIVIDAD ===== */
+.detalle-actividad {
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ebe5e6;
+}
+
+.detalle-actividad:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.detalle-actividad-fecha {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.detalle-actividad-contenido {
+    padding-left: 20px;
+}
+
+.detalle-actividad-texto {
+    font-size: 14px;
+    color: #374151;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* ===== IMÁGENES DE ACTIVIDAD ===== */
+.detalle-actividad-imagenes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.detalle-actividad-imagenes img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.detalle-actividad-imagenes img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== BOTÓN VOLVER ===== */
+.detalle-btn-volver {
+    font-size: 20px;
+    color: #111827;
+    text-decoration: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .detalle-top-bar {
+        padding: 15px 20px;
+    }
+
+    .detalle-container {
+        padding: 0 20px;
+    }
+
+    .detalle-info-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .detalle-actividad-imagenes {
+        grid-template-columns: 1fr;
+    }
+
+    .detalle-actividad-imagenes img {
+        height: 200px;
+    }
+
+    .detalle-btn-volver {
+        left: 20px;
+        bottom: 20px;
+    }
+}

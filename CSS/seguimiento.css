@@ -1,3 +1,9 @@
+/* ========================================
+   SEGUIMIENTO.CSS
+   Estilos específicos para la página de seguimiento
+   Depende de: base.css
+======================================== */
+
 /* ===== BARRA SUPERIOR (USER INFO) ===== */
 .seguimiento-top-bar {
     display: flex;
@@ -15,7 +21,6 @@
     letter-spacing: 2px;
     color: #111827;
     margin: 0 0 25px 0;
-    
 }
 
 /* ===== FILTRO ALINEADO A LA IZQUIERDA ===== */
@@ -64,6 +69,18 @@
 
 .tracking-table tbody tr {
     background: #f4f4f4;
+    transition: all 0.2s ease;
+}
+
+/* ===== FILAS CLICKEABLES ===== */
+.clickeable-row {
+    cursor: pointer;
+}
+
+.clickeable-row:hover {
+    background: #e8e8e8 !important;
+    transform: scale(1.01);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .tracking-table td {
@@ -127,4 +144,3 @@
         min-width: 900px;
     }
 }
-

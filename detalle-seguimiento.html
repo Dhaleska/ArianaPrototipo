@@ -1,0 +1,201 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle de Actividades</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/detalle-seguimiento.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Multiservicios Ariana">
+        </div>
+
+        <nav class="menu">
+            <a href="registro.html" class="menu-item">
+                <i class="fa-solid fa-pen"></i>
+                Registro
+            </a>
+
+            <a href="seguimiento.html" class="menu-item active">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Seguimiento
+            </a>
+
+            <a href="notificacion.html" class="menu-item">
+                <i class="fa-solid fa-bell"></i>
+                Notificación
+            </a>
+
+            <a href="servicios.html" class="menu-item">
+                <i class="fa-solid fa-plus"></i>
+                Servicios
+            </a>
+
+            <a href="personal.html" class="menu-item">
+                <i class="fa-solid fa-user"></i>
+                Personal
+            </a>
+
+            <a href="clientes.html" class="menu-item">
+                <i class="fa-solid fa-users"></i>
+                Cliente
+            </a>
+
+            <a href="dashboard.html" class="menu-item">
+                <i class="fa-solid fa-chart-column"></i>
+                Dashboard
+            </a>
+        </nav>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main class="content">
+
+        <!-- Header -->
+        <div class="detalle-top-bar">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+            <div class="user-info">
+                <span>Juan Carlos</span>
+                <div class="user-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Título -->
+        <h2 class="detalle-title">DETALLE DE ACTIVIDADES</h2>
+
+        <!-- Código del registro -->
+        <p class="detalle-codigo">CÓDIGO: N°0002</p>
+
+        <!-- Contenedor de información del registro -->
+        <div class="detalle-container">
+
+            <!-- Sección de información -->
+            <div class="detalle-info-grid">
+                
+                <!-- Fila 1 -->
+                <div class="detalle-field">
+                    <label>Estado del tiempo</label>
+                    <input type="text" value="Por vencer" readonly>
+                </div>
+
+                <div class="detalle-field">
+                    <label>Estado del servicio</label>
+                    <input type="text" value="En proceso" readonly>
+                </div>
+
+                <!-- Fila 2 -->
+                <div class="detalle-field">
+                    <label>Nombre del registro</label>
+                    <input type="text" value="Oficina de drywall" readonly>
+                </div>
+
+                <div class="detalle-field">
+                    <label>Cliente</label>
+                    <input type="text" value="Sonia Cifuente" readonly>
+                </div>
+
+                <!-- Fila 3 -->
+                <div class="detalle-field">
+                    <label>Trabajador</label>
+                    <input type="text" value="Fidel Ruiz" readonly>
+                </div>
+
+                <div class="detalle-field">
+                    <label>Tipo de Servicio</label>
+                    <input type="text" value="Drywall" readonly>
+                </div>
+
+                <!-- Fila 4 -->
+                <div class="detalle-field">
+                    <label>Fecha Inicio</label>
+                    <input type="text" value="22/09/2025" readonly>
+                </div>
+
+                <div class="detalle-field">
+                    <label>Fecha Fin</label>
+                    <input type="text" value="25/09/2025" readonly>
+                </div>
+
+                <!-- Fila 5 -->
+                <div class="detalle-field">
+                    <label>Duración</label>
+                    <input type="text" value="4 días" readonly>
+                </div>
+
+                <div class="detalle-field">
+                    <label>Prioridad</label>
+                    <input type="text" value="Alta" readonly>
+                </div>
+
+                <!-- Fila 6 - Comentario (ancho completo) -->
+                <div class="detalle-field detalle-field-full">
+                    <label>Comentario</label>
+                    <textarea readonly>Se realizó el armado de la estructura.</textarea>
+                </div>
+
+            </div>
+
+            <!-- Historial de actividades -->
+            <div class="detalle-historial">
+                <h3 class="detalle-historial-title">Historial de actividades</h3>
+
+                <!-- Actividad 1 -->
+                <div class="detalle-actividad">
+                    <p class="detalle-actividad-fecha">22/09/2025</p>
+                    <div class="detalle-actividad-contenido">
+                        <p class="detalle-actividad-texto">Se realizó el armado de la estructura.</p>
+                        <div class="detalle-actividad-imagenes">
+                            <img src="img/construccion1.jpg" alt="Imagen 1">
+                            <img src="img/construccion2.jpg" alt="Imagen 2">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actividad 2 -->
+                <div class="detalle-actividad">
+                    <p class="detalle-actividad-fecha">23/09/2025</p>
+                    <div class="detalle-actividad-contenido">
+                        <p class="detalle-actividad-texto">Instalación de paneles de drywall en las paredes.</p>
+                        <div class="detalle-actividad-imagenes">
+                            <img src="img/construccion3.jpg" alt="Imagen 3">
+                            <img src="img/construccion4.jpg" alt="Imagen 4">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actividad 3 -->
+                <div class="detalle-actividad">
+                    <p class="detalle-actividad-fecha">24/09/2025</p>
+                    <div class="detalle-actividad-contenido">
+                        <p class="detalle-actividad-texto">Aplicación de masilla y lijado de las juntas.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Botón volver -->
+        <a href="seguimiento.html" class="detalle-btn-volver">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+    </main>
+    
+    <script>
+        function toggleMenu() {
+            document.querySelector(".sidebar").classList.toggle("show");
+        }
+    </script>
+
+</body>
+</html>

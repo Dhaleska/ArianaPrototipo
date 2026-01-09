@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <title>Seguimiento</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS GLOBAL (sidebar, header, user-info, menu-toggle) -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- CSS ESPECÍFICO DE SEGUIMIENTO -->
     <link rel="stylesheet" href="css/seguimiento.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -28,6 +30,11 @@
                 Seguimiento
             </a>
 
+            <a href="historial.html" class="menu-item">
+                <i class="fa-solid fa-file-lines"></i>
+                Historial
+            </a>
+
             <a href="notificacion.html" class="menu-item">
                 <i class="fa-solid fa-bell"></i>
                 Notificación
@@ -48,18 +55,18 @@
                 Cliente
             </a>
 
-            <a href="dashboard.html" class="menu-item">
+            <a href="reporte.html" class="menu-item">
                 <i class="fa-solid fa-chart-column"></i>
-                Dashboard
+                Reportes
             </a>
         </nav>
 
     </aside>
 
-    
+    <!-- CONTENIDO -->
     <main class="content">
 
-        <!-- User-->
+        <!-- Header con user info arriba a la derecha -->
         <div class="seguimiento-top-bar">
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             
@@ -71,10 +78,10 @@
             </div>
         </div>
 
-        <!-- Título-->
+        <!-- Título centrado -->
         <h2 class="seguimiento-title">SEGUIMIENTO ACTIVIDADES</h2>
 
-        <!-- Filtro -->
+        <!-- Filtro a la izquierda -->
         <div class="seguimiento-filter-bar">
             <label>Mes / Año</label>
             <input type="month" value="2025-09">
@@ -97,7 +104,7 @@
                 </thead>
 
                 <tbody>
-                    <tr>
+                    <tr class="clickeable-row" onclick="window.location.href='detalle-seguimiento.html'">
                         <td>0001</td>
                         <td>Luis Peralta</td>
                         <td>Fidel Ruiz</td>
@@ -108,7 +115,7 @@
                         <td>-</td>
                     </tr>
 
-                    <tr>
+                    <tr class="clickeable-row" onclick="window.location.href='detalle-seguimiento.html'">
                         <td>0002</td>
                         <td>Sonia Cifuente</td>
                         <td>Fidel Ruiz</td>
@@ -119,7 +126,7 @@
                         <td>3 días</td>
                     </tr>
 
-                    <tr>
+                    <tr class="clickeable-row" onclick="window.location.href='detalle-seguimiento.html'">
                         <td>0003</td>
                         <td>Nicol Vargas</td>
                         <td>Cesar Aguilar</td>
@@ -130,7 +137,7 @@
                         <td>7 días</td>
                     </tr>
 
-                    <tr>
+                    <tr class="clickeable-row" onclick="window.location.href='detalle-seguimiento.html'">
                         <td>0004</td>
                         <td>José Flores</td>
                         <td>Heber Quispe</td>
@@ -154,25 +161,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
