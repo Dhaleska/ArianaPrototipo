@@ -31,7 +31,7 @@
 .notificacion-header-info h3 {
     font-size: 20px;
     font-weight: 600;
-    color: #111827;
+    color: #312a6d;
     margin: 0 0 5px 0;
 }
 
@@ -57,12 +57,12 @@
 .notificacion-count {
     font-size: 28px;
     font-weight: 700;
-    color: #111827;
+    color: #271112;
 }
 
 .notificacion-header-stats i {
     font-size: 32px;
-    color: #3b82f6;
+    color: #f59e0b;
 }
 
 /* ===== FILTROS ===== */
@@ -91,13 +91,13 @@
 
 .notificacion-filter-select:hover,
 .notificacion-filter-date:hover {
-    border-color: #3b82f6;
+    border-color: #312a6d;
 }
 
 .notificacion-filter-select:focus,
 .notificacion-filter-date:focus {
     outline: none;
-    border-color: #3b82f6;
+    border-color: #312a6d;
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
@@ -375,7 +375,7 @@
 }
 
 .notificacion-btn-primary {
-    background-color: #3b82f6;
+    background-color: #2d4586;
     color: white;
 }
 

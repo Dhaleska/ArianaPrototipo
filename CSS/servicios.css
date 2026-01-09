@@ -47,7 +47,7 @@
     border: 1px solid #d1d5db;
     border-radius: 4px;
     font-size: 13px;
-    color: #111827;
+    color: #271114;
 }
 
 .servicios-form-group input::placeholder {
@@ -66,7 +66,7 @@
 .servicios-form-group input:focus,
 .servicios-form-group select:focus {
     outline: none;
-    border-color: #3b82f6;
+    border-color: #312a6d;
 }
 
 .servicios-form-btn {

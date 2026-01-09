@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte - Multiservicios Ariana</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="img/logo.png" alt="Multiservicios Ariana">
+        </div>
+
+        <nav class="menu">
+            <a href="registro.html" class="menu-item">
+                <i class="fa-solid fa-pen"></i>
+                Registro
+            </a>
+
+            <a href="seguimiento.html" class="menu-item">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Seguimiento
+            </a>
+
+            <a href="historial.html" class="menu-item">
+                <i class="fa-solid fa-file-lines"></i>
+                Historial
+            </a>
+
+            <a href="notificacion.html" class="menu-item">
+                <i class="fa-solid fa-bell"></i>
+                Notificación
+            </a>
+
+            <a href="servicios.html" class="menu-item">
+                <i class="fa-solid fa-plus"></i>
+                Servicios
+            </a>
+
+            <a href="personal.html" class="menu-item">
+                <i class="fa-solid fa-user"></i>
+                Personal
+            </a>
+
+            <a href="clientes.html" class="menu-item">
+                <i class="fa-solid fa-users"></i>
+                Cliente
+            </a>
+
+            <a href="reporte.html" class="menu-item active">
+                <i class="fa-solid fa-chart-column"></i>
+                Dashboard
+            </a>
+        </nav>
+
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="content">
+
+        <!-- Header del contenido -->
+            <div class="reporte-top-bar">
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+                <div class="user-info">
+                    <span>Juan Carlos</span>
+                    <div class="user-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Título -->
+            <h2 class="reporte-title">DASHBOARD</h2>
+
+            <!-- Selector de Período debajo del título -->
+            <div class="reporte-controls">
+                <select class="periodo-selector">
+                    <option>Última semana</option>
+                    <option selected>Último mes</option>
+                    <option>Último trimestre</option>
+                    <option>Último año</option>
+                </select>
+            </div>
+
+        <!-- CONTENEDOR SPLIT -->
+        <div class="split-container">
+            
+            <!-- PANEL IZQUIERDO: KPIs y Gráficos -->
+            <div class="panel-izquierdo">
+                
+                <!-- Sección de KPIs -->
+                <div class="seccion-titulo">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Indicadores Generales
+                </div>
+
+                <div class="kpi-grid">
+                    <div class="kpi-card kpi-total">
+                        <div class="kpi-icono">
+                            <i class="fa-solid fa-clipboard-list"></i>
+                        </div>
+                        <div class="kpi-info">
+                            <div class="kpi-label">Total Servicios</div>
+                            <div class="kpi-value">248</div>
+                            <div class="kpi-subtitle">En el período actual</div>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card kpi-plazo">
+                        <div class="kpi-icono">
+                            <i class="fa-solid fa-check-circle"></i>
+                        </div>
+                        <div class="kpi-info">
+                            <div class="kpi-label">En Plazo</div>
+                            <div class="kpi-value">87.5%</div>
+                            <div class="kpi-subtitle">217 de 248 servicios</div>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card kpi-tiempo">
+                        <div class="kpi-icono">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div class="kpi-info">
+                            <div class="kpi-label">Tiempo Promedio</div>
+                            <div class="kpi-value">4.2</div>
+                            <div class="kpi-subtitle">Días de atención</div>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card kpi-vencido">
+                        <div class="kpi-icono">
+                            <i class="fa-solid fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="kpi-info">
+                            <div class="kpi-label">Vencidos</div>
+                            <div class="kpi-value">12.5%</div>
+                            <div class="kpi-subtitle">31 servicios retrasados</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Análisis -->
+                <div class="info-card">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div>
+                        <h4>Análisis del Período</h4>
+                        <p>El desempeño general del equipo ha mejorado un <strong>8.3%</strong> respecto al mes anterior. Se recomienda revisar la carga de trabajo de algunos trabajadores.</p>
+                    </div>
+                </div>
+
+                <!-- Resumen por Trabajador -->
+                <div class="seccion-titulo">
+                    <i class="fa-solid fa-users"></i>
+                    Resumen por Trabajador
+                </div>
+
+                <div class="stats-row">
+                    <div class="stat-box">
+                        <i class="fa-solid fa-user-group"></i>
+                        <div class="stat-value">6</div>
+                        <div class="stat-label">Trabajadores</div>
+                    </div>
+                    <div class="stat-box">
+                        <i class="fa-solid fa-tasks"></i>
+                        <div class="stat-value">41</div>
+                        <div class="stat-label">Promedio Asignados</div>
+                    </div>
+                    <div class="stat-box">
+                        <i class="fa-solid fa-chart-bar"></i>
+                        <div class="stat-value">83.6%</div>
+                        <div class="stat-label">Tasa Finalización</div>
+                    </div>
+                    <div class="stat-box">
+                        <i class="fa-solid fa-trophy"></i>
+                        <div class="stat-value">90.8%</div>
+                        <div class="stat-label">Cumplimiento</div>
+                    </div>
+                </div>
+
+                <!-- Gráficos -->
+                <div class="chart-section">
+                    <h3>
+                        <i class="fa-solid fa-chart-pie"></i>
+                        Distribución de Estados
+                    </h3>
+                    <div class="chart-placeholder">
+                        <i class="fa-solid fa-chart-pie" style="font-size: 48px; opacity: 0.3;"></i>
+                        <p>Gráfico Circular: Finalizado (52%), En Proceso (28%), Pendiente (15%), Cancelado (5%)</p>
+                    </div>
+                </div>
+
+                <div class="chart-section">
+                    <h3>
+                        <i class="fa-solid fa-chart-line"></i>
+                        Tendencia Mensual
+                    </h3>
+                    <div class="chart-placeholder">
+                        <i class="fa-solid fa-chart-line" style="font-size: 48px; opacity: 0.3;"></i>
+                        <p>Gráfico de Líneas: Servicios creados vs finalizados por día</p>
+                    </div>
+                </div>
+
+                <div class="chart-section">
+                    <h3>
+                        <i class="fa-solid fa-chart-bar"></i>
+                        Tiempo por Tipo de Servicio
+                    </h3>
+                    <div class="chart-placeholder">
+                        <i class="fa-solid fa-chart-bar" style="font-size: 48px; opacity: 0.3;"></i>
+                        <p>Instalación: 5.2 días | Reparación: 3.8 días | Mantenimiento: 2.5 días</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- DIVISOR -->
+            <div class="divisor-vertical">              
+            </div>
+
+            <!-- PANEL DERECHO: Tabla y Detalles -->
+            <div class="panel-derecho">
+                
+                <div class="seccion-titulo">
+                    <i class="fa-solid fa-table"></i>
+                    Detalle por Trabajador
+                </div>
+
+                <!-- Tabla de Trabajadores -->
+                <div class="tabla-section">
+                    <div class="tabla-header">
+                        <h3>
+                            <i class="fa-solid fa-ranking-star"></i>
+                            Ranking de Desempeño
+                        </h3>
+                        <input type="text" class="search-box" placeholder="🔍 Buscar trabajador...">
+                    </div>
+
+                    <div class="tabla-wrapper">
+                        <table class="tabla-trabajadores">
+                            <thead>
+                                <tr>
+                                    <th>Pos.</th>
+                                    <th>Trabajador</th>
+                                    <th>Asignados</th>
+                                    <th>Finalizados</th>
+                                    <th>Tasa</th>
+                                    <th>Cumplimiento</th>
+                                    <th>Tiempo Avg</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>1</strong></td>
+                                    <td><strong>María García</strong></td>
+                                    <td>52</td>
+                                    <td>47</td>
+                                    <td>
+                                        <div class="progreso-circular" data-porcentaje="90">
+                                            <span>90%</span>
+                                        </div>
+                                    </td>
+                                    <td>97.9%</td>
+                                    <td>3.2 días</td>
+                                    <td>
+                                        <span class="badge badge-excelente">
+                                            <i class="fa-solid fa-star"></i>
+                                            Excelente
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2</strong></td>
+                                    <td><strong>Patricia Vega</strong></td>
+                                    <td>37</td>
+                                    <td>33</td>
+                                    <td>
+                                        <div class="progreso-circular" data-porcentaje="89">
+                                            <span>89%</span>
+                                        </div>
+                                    </td>
+                                    <td>97.0%</td>
+                                    <td>3.5 días</td>
+                                    <td>
+                                        <span class="badge badge-excelente">
+                                            <i class="fa-solid fa-star"></i>
+                                            Excelente
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>3</strong></td>
+                                    <td><strong>Ana Torres</strong></td>
+                                    <td>41</td>
+                                    <td>35</td>
+                                    <td>
+                                        <div class="progreso-circular" data-porcentaje="85">
+                                            <span>85%</span>
+                                        </div>
+                                    </td>
+                                    <td>91.4%</td>
+                                    <td>4.1 días</td>
+                                    <td>
+                                        <span class="badge badge-bueno">
+                                            <i class="fa-solid fa-thumbs-up"></i>
+                                            Bueno
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>4</strong></td>
+                                    <td><strong>Juan Pérez</strong></td>
+                                    <td>45</td>
+                                    <td>38</td>
+                                    <td>
+                                        <div class="progreso-circular" data-porcentaje="84">
+                                            <span>84%</span>
+                                        </div>
+                                    </td>
+                                    <td>94.7%</td>
+                                    <td>3.8 días</td>
+                                    <td>
+                                        <span class="badge badge-bueno">
+                                            <i class="fa-solid fa-thumbs-up"></i>
+                                            Bueno
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>5</strong></td>
+                                    <td><strong>Carlos Ruiz</strong></td>
+                                    <td>38</td>
+                                    <td>30</td>
+                                    <td>
+                                        <div class="progreso-circular" data-porcentaje="79">
+                                            <span>79%</span>
+                                        </div>
+                                    </td>
+                                    <td>86.7%</td>
+                                    <td>4.5 días</td>
+                                    <td>
+                                        <span class="badge badge-regular">
+                                            <i class="fa-solid fa-minus"></i>
+                                            Regular
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>6</strong></td>
+                                    <td><strong>Luis Mendoza</strong></td>
+                                    <td>35</td>
+                                    <td>22</td>
+                                    <td>
+                                        <div class="progreso-circular" data-porcentaje="63">
+                                            <span>63%</span>
+                                        </div>
+                                    </td>
+                                    <td>77.3%</td>
+                                    <td>5.8 días</td>
+                                    <td>
+                                        <span class="badge badge-atencion">
+                                            <i class="fa-solid fa-exclamation"></i>
+                                            Necesita Atención
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Gráficos Adicionales -->
+                <div class="chart-section">
+                    <h3>
+                        <i class="fa-solid fa-chart-column"></i>
+                        Comparativa de Rendimiento
+                    </h3>
+                    <div class="chart-placeholder">
+                        <i class="fa-solid fa-chart-column" style="font-size: 48px; opacity: 0.3;"></i>
+                        <p>Gráfico de Barras: Servicios finalizados vs asignados por trabajador</p>
+                    </div>
+                </div>
+
+                <div class="chart-section">
+                    <h3>
+                        <i class="fa-solid fa-chart-area"></i>
+                        Evolución Semanal
+                    </h3>
+                    <div class="chart-placeholder">
+                        <i class="fa-solid fa-chart-area" style="font-size: 48px; opacity: 0.3;"></i>
+                        <p>Gráfico de Líneas: Evolución del desempeño en las últimas 4 semanas</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+    
+    <script>
+        function toggleMenu() {
+            document.querySelector(".sidebar").classList.toggle("show");
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
