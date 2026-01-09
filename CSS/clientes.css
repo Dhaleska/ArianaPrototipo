@@ -1,0 +1,187 @@
+/* ========================================
+   CLIENTES.CSS
+   Estilos específicos para la página de clientes
+   Depende de: base.css
+======================================== */
+
+/* ===== BARRA SUPERIOR (USER INFO) ===== */
+.clientes-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    margin-bottom: 30px;
+}
+
+/* ===== TÍTULO CENTRADO ===== */
+.clientes-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #111827;
+    margin: 0 0 25px 0;
+}
+
+/* ===== LAYOUT (FORMULARIO + TABLA) ===== */
+.clientes-layout {
+    display: flex;
+    gap: 30px;
+    padding: 0 30px;
+    align-items: flex-start;
+}
+
+/* ===== FORMULARIO (IZQUIERDA) ===== */
+.clientes-form-container {
+    width: 320px;
+    flex-shrink: 0;
+}
+
+.clientes-form {
+    background: transparent;
+    padding: 0;
+}
+
+.clientes-form-group {
+    margin-bottom: 15px;
+}
+
+.clientes-form-group input,
+.clientes-form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #111827;
+}
+
+.clientes-form-group input::placeholder {
+    color: #9ca3af;
+}
+
+.clientes-form-group select {
+    color: #9ca3af;
+    cursor: pointer;
+}
+
+.clientes-form-group select:valid {
+    color: #111827;
+}
+
+.clientes-form-group input:focus,
+.clientes-form-group select:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+.clientes-form-btn {
+    width: 200px; 
+    padding: 10px;
+    background: #0b2a3a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    display: block;
+    margin: 0 auto;
+}
+
+.clientes-form-btn:hover {
+    background: #16306d;
+}
+
+/* ===== TABLA (DERECHA) ===== */
+.clientes-table-container {
+    flex: 1;
+    background: transparent;
+    padding: 0;
+    overflow-x: auto;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.clientes-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    min-width: 850px;
+}
+
+.clientes-table thead th {
+    background: #d9d9d9;
+    padding: 10px 8px;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+}
+
+.clientes-table tbody tr {
+    background: #f4f4f4;
+}
+
+.clientes-table td {
+    padding: 12px 8px;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* ===== BOTONES DE ACCIÓN ===== */
+.clientes-action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 8px;
+    margin: 0 3px;
+    transition: transform 0.2s;
+}
+
+.clientes-action-btn.edit {
+    color: #1e293b;
+}
+
+.clientes-action-btn.delete {
+    color: #b91c1c;
+}
+
+.clientes-action-btn.more {
+    color: #6b7280;
+}
+
+.clientes-action-btn:hover {
+    transform: scale(1.15);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+    .clientes-layout {
+        flex-direction: column;
+    }
+
+    .clientes-form-container {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .clientes-table-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .clientes-top-bar {
+        padding: 15px 20px;
+    }
+
+    .clientes-layout {
+        padding: 0 20px;
+    }
+
+    .clientes-table-container {
+        max-height: 400px;
+    }
+}

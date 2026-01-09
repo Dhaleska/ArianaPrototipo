@@ -1,10 +1,11 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Notificacion</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/notificacion.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="layout">
@@ -27,12 +28,7 @@
                 Seguimiento
             </a>
 
-            <a href="historial.html" class="menu-item">
-                <i class="fa-solid fa-file-lines"></i>
-                Historial
-            </a>
-
-            <a href="notificacion.html" class="menu-item  active">
+            <a href="notificacion.html" class="menu-item active">
                 <i class="fa-solid fa-bell"></i>
                 Notificación
             </a>
@@ -60,16 +56,13 @@
 
     </aside>
 
-
     <!-- CONTENIDO -->
     <main class="content">
 
         <!-- Header del contenido -->
-        <div class="content-header">
+        <div class="notificacion-top-bar">
 
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-            <h2>NOTIFICACION</h2>
 
             <div class="user-info">
                 <span>Juan Carlos</span>
@@ -77,16 +70,252 @@
                     <i class="fa-solid fa-user"></i>
                 </div>
             </div>
+        </div>
+
+        <!-- Título-->
+        <h2 class="notificacion-title">NOTIFICACIÓN</h2>
+
+        <!-- Header con estadísticas -->
+        <div class="notificacion-header">
+            <div class="notificacion-header-info">
+                <h3>Registro de Alertas</h3>
+                <p>Sistema de seguimiento y gestión de notificaciones</p>
+            </div>
+            <div class="notificacion-header-stats">
+                <p>Total de alertas</p>
+                <span class="notificacion-count">5</span>
+                <i class="fa-solid fa-bell"></i>
+            </div>
+        </div>
+
+        <!-- Filtros -->
+        <div class="notificacion-filters">
+            <select class="notificacion-filter-select">
+                <option>Todos los tipos</option>
+                <option>Críticas</option>
+                <option>Advertencias</option>
+                <option>Información</option>
+            </select>
+
+            <select class="notificacion-filter-select">
+                <option>Todos los estados</option>
+                <option>Pendientes</option>
+                <option>Reconocidas</option>
+                <option>Resueltas</option>
+            </select>
+
+            <input type="date" class="notificacion-filter-date" value="2026-01-04">
+        </div>
+
+        <!-- Contenedor principal -->
+        <div class="notificacion-container">
+            
+            <!-- Lista de alertas -->
+            <div class="notificacion-list">
+                
+                <!-- Alerta 1 - Crítica -->
+                <div class="notificacion-card">
+                    <div class="notificacion-card-header">
+                        <i class="fa-solid fa-triangle-exclamation notificacion-icon-critical"></i>
+                        <div class="notificacion-card-content">
+                            <div class="notificacion-card-top">
+                                <h4>Servicio no completado</h4>
+                                <span class="notificacion-badge notificacion-badge-pending">Pendiente</span>
+                            </div>
+                            <p class="notificacion-description">El servicio de mantenimiento preventivo no fue finalizado</p>
+                            <div class="notificacion-metadata">
+                                <span><i class="fa-regular fa-calendar"></i> 2026-01-04</span>
+                                <span><i class="fa-regular fa-clock"></i> 14:30:25</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alerta 2 - Advertencia -->
+                <div class="notificacion-card">
+                    <div class="notificacion-card-header">
+                        <i class="fa-solid fa-bell notificacion-icon-warning"></i>
+                        <div class="notificacion-card-content">
+                            <div class="notificacion-card-top">
+                                <h4>Retraso en inicio de servicio</h4>
+                                <span class="notificacion-badge notificacion-badge-resolved">Resuelta</span>
+                            </div>
+                            <p class="notificacion-description">El servicio programado tiene 15 minutos de retraso</p>
+                            <div class="notificacion-metadata">
+                                <span><i class="fa-regular fa-calendar"></i> 2026-01-04</span>
+                                <span><i class="fa-regular fa-clock"></i> 13:15:10</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alerta 3 - Información -->
+                <div class="notificacion-card">
+                    <div class="notificacion-card-header">
+                        <i class="fa-solid fa-circle-check notificacion-icon-info"></i>
+                        <div class="notificacion-card-content">
+                            <div class="notificacion-card-top">
+                                <h4>Servicio próximo a vencer</h4>
+                                <span class="notificacion-badge notificacion-badge-acknowledged">Reconocida</span>
+                            </div>
+                            <p class="notificacion-description">El servicio está programado para iniciar en 30 minutos</p>
+                            <div class="notificacion-metadata">
+                                <span><i class="fa-regular fa-calendar"></i> 2026-01-04</span>
+                                <span><i class="fa-regular fa-clock"></i> 12:45:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alerta 4 - Crítica -->
+                <div class="notificacion-card">
+                    <div class="notificacion-card-header">
+                        <i class="fa-solid fa-triangle-exclamation notificacion-icon-critical"></i>
+                        <div class="notificacion-card-content">
+                            <div class="notificacion-card-top">
+                                <h4>Trabajador no disponible</h4>
+                                <span class="notificacion-badge notificacion-badge-pending">Pendiente</span>
+                            </div>
+                            <p class="notificacion-description">El trabajador asignado no se encuentra disponible para el servicio</p>
+                            <div class="notificacion-metadata">
+                                <span><i class="fa-regular fa-calendar"></i> 2026-01-04</span>
+                                <span><i class="fa-regular fa-clock"></i> 11:20:45</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alerta 5 - Advertencia -->
+                <div class="notificacion-card">
+                    <div class="notificacion-card-header">
+                        <i class="fa-solid fa-bell notificacion-icon-warning"></i>
+                        <div class="notificacion-card-content">
+                            <div class="notificacion-card-top">
+                                <h4>Materiales insuficientes</h4>
+                                <span class="notificacion-badge notificacion-badge-resolved">Resuelta</span>
+                            </div>
+                            <p class="notificacion-description">Se detectó falta de materiales para completar el servicio</p>
+                            <div class="notificacion-metadata">
+                                <span><i class="fa-regular fa-calendar"></i> 2026-01-04</span>
+                                <span><i class="fa-regular fa-clock"></i> 10:05:30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Panel de detalles - EJEMPLO CON DATOS ESTÁTICOS -->
+            <div class="notificacion-details">
+                <div class="notificacion-details-content">
+                    <h2 class="notificacion-details-title">Detalles de la Alerta</h2>
+                    
+                    <div class="notificacion-details-header">
+                        <i class="fa-solid fa-triangle-exclamation notificacion-icon-critical"></i>
+                        <div class="notificacion-details-header-text">
+                            <h3>Servicio no completado</h3>
+                            <span class="notificacion-badge notificacion-badge-pending">Pendiente</span>
+                        </div>
+                    </div>
+
+                    <div class="notificacion-info-block">
+                        <p class="notificacion-info-label">Descripción</p>
+                        <p class="notificacion-info-value">El servicio de mantenimiento preventivo no fue finalizado</p>
+                    </div>
+
+                    <div class="notificacion-datetime-grid">
+                        <div class="notificacion-info-block notificacion-info-block-blue">
+                            <p class="notificacion-info-label">
+                                <i class="fa-regular fa-calendar"></i> Fecha
+                            </p>
+                            <p class="notificacion-info-value">2026-01-04</p>
+                        </div>
+
+                        <div class="notificacion-info-block notificacion-info-block-blue">
+                            <p class="notificacion-info-label">
+                                <i class="fa-regular fa-clock"></i> Hora
+                            </p>
+                            <p class="notificacion-info-value">14:30:25</p>
+                        </div>
+                    </div>
+
+                    <div class="notificacion-info-block notificacion-info-block-green">
+                        <p class="notificacion-info-label">
+                            <i class="fa-solid fa-user"></i> Trabajador
+                        </p>
+                        <p class="notificacion-info-value">Juan Pérez</p>
+                        <p class="notificacion-info-secondary">ID: TRB-001</p>
+                    </div>
+
+                    <div class="notificacion-info-block notificacion-info-block-purple">
+                        <p class="notificacion-info-label">
+                            <i class="fa-solid fa-briefcase"></i> Servicio
+                        </p>
+                        <p class="notificacion-info-value">Mantenimiento Preventivo - Zona A</p>
+                        <p class="notificacion-info-secondary">ID: SRV-2024-0145</p>
+                    </div>
+
+                    <div class="notificacion-actions">
+                        <button class="notificacion-btn notificacion-btn-primary">
+                            Marcar como resuelta
+                        </button>
+                        <button class="notificacion-btn notificacion-btn-secondary">
+                            Ver servicio
+                        </button>
+                    </div>
+                </div>
+            </div>
 
         </div>
+        
     </main>
     
     <script>
         function toggleMenu() {
             document.querySelector(".sidebar").classList.toggle("show");
         }
-
     </script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Servicios</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/servicios.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="layout">
@@ -37,7 +38,7 @@
                 Notificación
             </a>
 
-            <a href="servicios.html" class="menu-item  active">
+            <a href="servicios.html" class="menu-item active">
                 <i class="fa-solid fa-plus"></i>
                 Servicios
             </a>
@@ -60,16 +61,12 @@
 
     </aside>
 
-
     <!-- CONTENIDO -->
     <main class="content">
 
         <!-- Header del contenido -->
-        <div class="content-header">
-
+        <div class="servicios-top-bar">
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-            <h2>REGISTRO DE SERVICIOS</h2>
 
             <div class="user-info">
                 <span>Juan Carlos</span>
@@ -79,38 +76,104 @@
             </div>
         </div>
 
+        <!-- Título-->
+        <h2 class="servicios-title">REGISTRO DE SERVICIOS</h2>
+
         <div class="servicios-layout">
             <!-- FORMULARIO (IZQUIERDA) -->
-            <div class="servicios-form">
-                <input type="text" placeholder="Nombre del servicio*">
-                <select>
-                    <option value="">Seleccionar estado</option>
-                    <option>Activo</option>
-                    <option>Inactivo</option>
-                </select>
+            <div class="servicios-form-container">
+                <form class="servicios-form">
+                    <div class="servicios-form-group">
+                        <input type="text" placeholder="Nombre del servicio*" required>
+                    </div>
 
-                <button type="button">Registrar</button>
+                    <div class="servicios-form-group">
+                        <select required>
+                            <option value="" selected disabled>Seleccionar estado</option>
+                            <option value="Activo">Activo</option>
+                            <option value="Inactivo">Inactivo</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="servicios-form-btn">Registrar</button>
+                </form>
             </div>
 
             <!-- TABLA -->
             <div class="servicios-table-wrapper">
-                <table class="tracking-table">
+                <table class="servicios-table">
                     <thead>
                         <tr>
                             <th>N°</th>
-                            <th>Nombre</th>
-                            <th>Estado</th>
-                            <th>Acciones</th>
+                            <th>NOMBRE</th>
+                            <th>ESTADO</th>
+                            <th>ACCIONES</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
                             <td>Electricidad</td>
-                            <td class="servicio-estado">Activo</td>
+                            <td>Activo</td>
                             <td>
-                                <button class="btn-editar"><i class="fa-solid fa-pen"></i></button>
-                                <button class="btn-eliminar"><i class="fa-solid fa-trash"></i></button>
+                                <button class="servicios-action-btn edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="servicios-action-btn delete">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Plomería</td>
+                            <td>Inactivo</td>
+                            <td>
+                                <button class="servicios-action-btn edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="servicios-action-btn delete">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Pintura</td>
+                            <td>Activo</td>
+                            <td>
+                                <button class="servicios-action-btn edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="servicios-action-btn delete">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Mantenimiento</td>
+                            <td>Activo</td>
+                            <td>
+                                <button class="servicios-action-btn edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="servicios-action-btn delete">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Drywall</td>
+                            <td>Inactivo</td>
+                            <td>
+                                <button class="servicios-action-btn edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="servicios-action-btn delete">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
                             </td>
                         </tr>
                     </tbody>
@@ -124,7 +187,6 @@
         function toggleMenu() {
             document.querySelector(".sidebar").classList.toggle("show");
         }
-
     </script>
 
 </body>

@@ -1,0 +1,444 @@
+/* ========================================
+   NOTIFICACION.CSS
+   Estilos específicos para la página de notificación
+   Depende de: base.css
+======================================== */
+
+/* ===== BARRA SUPERIOR (USER INFO) ===== */
+.notificacion-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    margin-bottom: 30px;
+}
+
+/* ===== TÍTULO CENTRADO ===== */
+.notificacion-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #111827;
+    margin: 0 0 25px 0;
+}
+
+/* ===== HEADER CON ESTADÍSTICAS ===== */
+.notificacion-header {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notificacion-header-info h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 5px 0;
+}
+
+.notificacion-header-info p {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.notificacion-header-stats {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: right;
+}
+
+.notificacion-header-stats p {
+    font-size: 12px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.notificacion-count {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.notificacion-header-stats i {
+    font-size: 32px;
+    color: #3b82f6;
+}
+
+/* ===== FILTROS ===== */
+.notificacion-filters {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.notificacion-filter-select,
+.notificacion-filter-date {
+    padding: 10px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #374151;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.notificacion-filter-select:hover,
+.notificacion-filter-date:hover {
+    border-color: #3b82f6;
+}
+
+.notificacion-filter-select:focus,
+.notificacion-filter-date:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.notificacion-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* ===== LISTA DE ALERTAS ===== */
+.notificacion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.notificacion-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.notificacion-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.notificacion-card.selected {
+    box-shadow: 0 0 0 2px #3b82f6;
+}
+
+.notificacion-card-header {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.notificacion-card-header i {
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+.notificacion-icon-critical {
+    color: #ef4444;
+}
+
+.notificacion-icon-warning {
+    color: #f59e0b;
+}
+
+.notificacion-icon-info {
+    color: #3b82f6;
+}
+
+.notificacion-card-content {
+    flex: 1;
+}
+
+.notificacion-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.notificacion-card-top h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+}
+
+/* ===== BADGES DE ESTADO ===== */
+.notificacion-badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.notificacion-badge-pending {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.notificacion-badge-acknowledged {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.notificacion-badge-resolved {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+/* ===== DESCRIPCIÓN Y METADATA ===== */
+.notificacion-description {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0 0 12px 0;
+}
+
+.notificacion-metadata {
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.notificacion-metadata span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.notificacion-metadata i {
+    font-size: 11px;
+}
+
+/* ===== PANEL DE DETALLES ===== */
+.notificacion-details {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    position: sticky;
+    top: 20px;
+    max-height: calc(100vh - 180px);
+    overflow-y: auto;
+}
+
+/* Estado vacío */
+.notificacion-details-empty {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.notificacion-details-empty i {
+    font-size: 48px;
+    color: #d1d5db;
+    margin-bottom: 15px;
+}
+
+.notificacion-details-empty p {
+    font-size: 14px;
+    color: #9ca3af;
+    margin: 0;
+}
+
+/* Contenido de detalles */
+.notificacion-details-content {
+    display: block;
+}
+
+.notificacion-details-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 20px 0;
+}
+
+.notificacion-details-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 20px;
+}
+
+.notificacion-details-header i {
+    font-size: 20px;
+}
+
+.notificacion-details-header-text {
+    flex: 1;
+}
+
+.notificacion-details-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 5px 0;
+}
+
+/* Bloques de información */
+.notificacion-info-block {
+    background-color: #f9fafb;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 12px;
+}
+
+.notificacion-info-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.notificacion-info-value {
+    font-size: 14px;
+    color: #111827;
+    margin: 0;
+}
+
+.notificacion-info-secondary {
+    font-size: 12px;
+    color: #6b7280;
+    margin: 5px 0 0 0;
+}
+
+/* Grid de fecha y hora */
+.notificacion-datetime-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.notificacion-info-block-blue {
+    background-color: #eff6ff;
+    border-left: 3px solid #3b82f6;
+}
+
+.notificacion-info-block-blue .notificacion-info-label {
+    color: #1e40af;
+}
+
+.notificacion-info-block-green {
+    background-color: #f0fdf4;
+    border-left: 3px solid #22c55e;
+}
+
+.notificacion-info-block-green .notificacion-info-label {
+    color: #15803d;
+}
+
+.notificacion-info-block-purple {
+    background-color: #faf5ff;
+    border-left: 3px solid #a855f7;
+}
+
+.notificacion-info-block-purple .notificacion-info-label {
+    color: #7e22ce;
+}
+
+.notificacion-info-block i {
+    margin-right: 8px;
+}
+
+/* Botones de acción */
+.notificacion-actions {
+    padding-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.notificacion-btn {
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    flex: 1;
+}
+
+.notificacion-btn-primary {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.notificacion-btn-primary:hover {
+    background-color: #2563eb;
+}
+
+.notificacion-btn-secondary {
+    background-color: white;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+.notificacion-btn-secondary:hover {
+    background-color: #f9fafb;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .notificacion-container {
+        grid-template-columns: 1fr;
+    }
+
+    .notificacion-details {
+        position: relative;
+        top: 0;
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .notificacion-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .notificacion-header-stats {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .notificacion-filters {
+        flex-direction: column;
+    }
+
+    .notificacion-filter-select,
+    .notificacion-filter-date {
+        width: 100%;
+    }
+
+    .notificacion-datetime-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .notificacion-actions {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,161 @@
+/* ========================================
+   PRINCIPAL.CSS
+   Estilos para la página principal (dashboard con botones)
+   NO necesita base.css (página independiente)
+======================================== */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== BODY PRINCIPAL ===== */
+.principal-body {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url("../img/fondo logo.png") no-repeat center center/cover;
+    color: white;
+    text-align: center;
+}
+
+/* Header */
+.principal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+}
+
+.principal-header .title {
+    text-align: center;
+    font-size: 26px;
+    margin-top: 35px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 30px;
+}
+
+.username {
+    font-weight: 500;
+}
+
+.user-icon {
+    background: white;
+    color: black;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main */
+.principal-main {
+    display: flex;
+    justify-content: center;
+    margin-top: 125px;
+}
+
+/* Grid de botones */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 140px);
+    gap: 25px;
+}
+
+/* Botones del menú */
+.menu-btn {
+    height: 110px;
+    background: rgba(255,255,255,0.25);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s, background 0.2s;
+    text-decoration: none;
+}
+
+.menu-btn span {
+    font-size: 14px;
+}
+
+.menu-btn:hover {
+    background: rgba(255,255,255,0.4);
+    transform: translateY(-5px);
+}
+
+/* Footer */
+.principal-footer {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+}
+
+/* BOTÓN CERRAR SESIÓN */
+.logout-btn {
+    background: #f1c40f;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.logout-btn:visited {
+    color: #1e293b;
+}
+
+.logout-btn:hover {
+    background: #d4ac0d;
+    text-decoration: none;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablets */
+@media (max-width: 900px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 140px);
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .menu-grid {
+        grid-template-columns: repeat(1, 160px);
+    }
+
+    .dashboard-main {
+        margin-top: 30px;
+    }
+
+    .logout-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}

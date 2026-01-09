@@ -1,10 +1,11 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Personal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/personal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="layout">
@@ -42,7 +43,7 @@
                 Servicios
             </a>
 
-            <a href="personal.html" class="menu-item  active">
+            <a href="personal.html" class="menu-item active">
                 <i class="fa-solid fa-user"></i>
                 Personal
             </a>
@@ -60,16 +61,12 @@
 
     </aside>
 
-
     <!-- CONTENIDO -->
     <main class="content">
 
         <!-- Header del contenido -->
-        <div class="content-header">
-
+        <div class="personal-top-bar">
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-            <h2>PERSONAL</h2>
 
             <div class="user-info">
                 <span>Juan Carlos</span>
@@ -77,15 +74,181 @@
                     <i class="fa-solid fa-user"></i>
                 </div>
             </div>
+        </div>
+
+        <!-- Título-->
+        <h2 class="personal-title">REGISTRO DE PERSONAL</h2>
+
+        <!-- Layout: Formulario + Tabla -->
+        <div class="personal-layout">
+            
+            <!-- FORMULARIO (IZQUIERDA) -->
+            <div class="personal-form-container">
+                <form class="personal-form">
+                    
+                    <div class="personal-form-group">
+                        <input type="text" placeholder="Nombre del personal*" required>
+                    </div>
+
+                    <div class="personal-form-group">
+                        <input type="text" placeholder="Apellido del personal*" required>
+                    </div>
+
+                    <div class="personal-form-group">
+                        <select required>
+                            <option value="" selected disabled>Tipo de documento*</option>
+                            <option value="DNI">DNI</option>
+                            <option value="CE">Carnet de Extranjería</option>
+                            <option value="Pasaporte">Pasaporte</option>
+                        </select>
+                    </div>
+
+                    <div class="personal-form-group">
+                        <input type="text" placeholder="N° DNI / Carnet de Extrangería*" required>
+                    </div>
+
+                    <div class="personal-form-group">
+                        <select required>
+                            <option value="" selected disabled>Seleccionar rol</option>
+                            <option value="Administrador">Administrador</option>
+                            <option value="Trabajador">Trabajador</option>
+                            <option value="Supervisor">Supervisor</option>
+                        </select>
+                    </div>
+
+                    <div class="personal-form-group">
+                        <select required>
+                            <option value="" selected disabled>Seleccionar estado</option>
+                            <option value="Activo">Activo</option>
+                            <option value="Inactivo">Inactivo</option>
+                        </select>
+                    </div>
+
+                    <div class="personal-form-group">
+                        <input type="email" placeholder="Correo electronico*" required>
+                    </div>
+
+                    <div class="personal-form-group">
+                        <input type="text" placeholder="Numero de celular*" required>
+                    </div>
+
+                    <button type="submit" class="personal-form-btn">Registrar</button>
+                </form>
+            </div>
+
+            <!-- TABLA (DERECHA) -->
+            <div class="personal-table-container">
+                <table class="personal-table">
+                    <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Nombre</th>
+                            <th>Teléfono</th>
+                            <th>Rol</th>
+                            <th>DNI</th>
+                            <th>Correo</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>-</td>
+                            <td>956445725</td>
+                            <td>Administrador</td>
+                            <td>75036459</td>
+                            <td>-</td>
+                            <td>Activo</td>
+                            <td>
+                                <button class="personal-action-btn edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="personal-action-btn delete">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>-</td>
+                            <td>952584235</td>
+                            <td>Trabajador</td>
+                            <td>27949584</td>
+                            <td>-</td>
+                            <td>Activo</td>
+                            <td>
+                                <button class="personal-action-btn edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="personal-action-btn delete">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>-</td>
+                            <td>918074725</td>
+                            <td>Trabajador</td>
+                            <td>78354280</td>
+                            <td>-</td>
+                            <td>Activo</td>
+                            <td>
+                                <button class="personal-action-btn edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="personal-action-btn delete">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>-</td>
+                            <td>950874029</td>
+                            <td>Trabajador</td>
+                            <td>26096 854</td>
+                            <td>-</td>
+                            <td>Activo</td>
+                            <td>
+                                <button class="personal-action-btn edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="personal-action-btn delete">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>Trabajador</td>
+                            <td>75075495</td>
+                            <td>-</td>
+                            <td>Inactivo</td>
+                            <td>
+                                <button class="personal-action-btn edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button class="personal-action-btn delete">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
         </div>
+
     </main>
     
     <script>
         function toggleMenu() {
             document.querySelector(".sidebar").classList.toggle("show");
         }
-
     </script>
 
 </body>

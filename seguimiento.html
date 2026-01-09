@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <title>Seguimiento</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/seguimiento.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body class="layout">
 
     <!-- SIDEBAR -->
-
-    
     <aside class="sidebar">
 
         <div class="logo">
@@ -28,11 +26,6 @@
             <a href="seguimiento.html" class="menu-item active">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 Seguimiento
-            </a>
-
-            <a href="historial.html" class="menu-item">
-                <i class="fa-solid fa-file-lines"></i>
-                Historial
             </a>
 
             <a href="notificacion.html" class="menu-item">
@@ -63,36 +56,32 @@
 
     </aside>
 
-
-    <!-- CONTENIDO -->
+    
     <main class="content">
 
-        <!-- Header del contenido -->
-        <div class="content-header seguimiento-header">
-
+        <!-- User-->
+        <div class="seguimiento-top-bar">
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-            <div class="header-center"></div>
-                <h2>SEGUIMIENTO ACTIVIDADES</h2>
-
-                <div class="filter-bar">
-                    <label>Mes / Año</label>
-                    <input type="month" value="2025-09">
+            
+            <div class="user-info">
+                <span>Juan Carlos</span>
+                <div class="user-icon">
+                    <i class="fa-solid fa-user"></i>
                 </div>
             </div>
         </div>
 
-        <div class="user-info">
-            <span>Juan Carlos</span>
-            <div class="user-icon">
-                <i class="fa-solid fa-user"></i>
-            </div>
-        </div>
-    
-    
+        <!-- Título-->
+        <h2 class="seguimiento-title">SEGUIMIENTO ACTIVIDADES</h2>
 
-            <!-- Tabla -->
-        <div class="table-container">
+        <!-- Filtro -->
+        <div class="seguimiento-filter-bar">
+            <label>Mes / Año</label>
+            <input type="month" value="2025-09">
+        </div>
+
+        <!-- Tabla -->
+        <div class="seguimiento-table-container">
             <table class="tracking-table">
                 <thead>
                     <tr>
@@ -161,8 +150,29 @@
         function toggleMenu() {
             document.querySelector(".sidebar").classList.toggle("show");
         }
-
     </script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

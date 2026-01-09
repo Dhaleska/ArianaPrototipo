@@ -1,0 +1,77 @@
+/* ========================================
+   REGISTRO.CSS
+   Estilos específicos para la página de registro
+   Depende de: base.css
+======================================== */
+.registro-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    margin-bottom: 30px;
+}
+.registro-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #111827;
+    margin: 0 0 25px 0;
+    
+}
+
+/* ===== OPCIONES DE REGISTRO ===== */
+.options {
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.option-card {
+    width: 140px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+}
+
+.option-icon {
+    width: 80px;
+    height: 80px;
+    background: #1e293b;
+    color: #fff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.option-icon:hover {
+    background: #16306d;
+    transform: scale(1.08);
+}
+
+.option-icon i {
+    font-size: 42px;
+    color: white;
+}
+
+.option-card span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .options {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 60px;
+    }
+}

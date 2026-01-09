@@ -1,0 +1,83 @@
+/* ========================================
+   LOGIN.CSS
+   Estilos específicos para la página de login
+   NO necesita base.css (página independiente)
+======================================== */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fondo */
+body {
+    height: 100vh;
+    background: url("../img/Fondo login.png") no-repeat center center/cover;
+}
+
+/* Contenedor principal */
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+}
+
+/* Tarjeta de login */
+.login-card {
+    background: #f2f2f2;
+    width: 320px;
+    padding: 30px 25px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Título */
+.login-card h2 {
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    color: #1f3b4d;
+}
+
+/* Inputs */
+.login-card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: none;
+    background: #e6e6e6;
+    border-radius: 3px;
+}
+
+/* Botón */
+.login-card button {
+    width: 100%;
+    padding: 10px;
+    background: #f1c40f;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-card button:hover {
+    background: #d4ac0d;
+}
+
+/* Link */
+.forgot {
+    display: block;
+    margin-top: 15px;
+    font-size: 12px;
+    color: #555;
+    text-decoration: none;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}

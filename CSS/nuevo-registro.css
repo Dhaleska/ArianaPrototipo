@@ -1,0 +1,151 @@
+/* ========================================
+   NUEVO-REGISTRO.CSS
+   Estilos específicos para la página de nuevo registro (formulario)
+   Depende de: base.css
+======================================== */
+
+/* ===== CÓDIGO EN HEADER ===== */
+.code {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* ===== FORMULARIO ===== */
+.registro-form {
+    margin-top: 40px;
+    max-width: 1100px;
+    width: 97%;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 40px;
+}
+
+/* ===== CAMPOS ===== */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #111827;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 10px 12px;
+    font-size: 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 90px;
+}
+
+/* ===== CAMPO CON BOTÓN + ===== */
+.with-button { 
+    position: relative;
+}
+
+.add-btn {
+    position: absolute;
+    right: -38px;
+    top: 50%;
+    transform: translateY(-15%);
+    width: 25px;
+    height: 28px;
+    border: none;
+    background: #111827;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ===== CAMPO ANCHO COMPLETO ===== */
+.full-width {
+    grid-column: 1 / 3;
+}
+
+/* ===== ACCIONES (BOTONES) ===== */
+.form-actions {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-btn {
+    font-size: 20px;
+    color: #111827;
+    text-decoration: none;
+}
+
+.save-btn {
+    padding: 8px 28px;
+    background-color: #111827;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ===== ESTILOS DE SELECT ===== */
+select {
+    color: #9ca3af; /* gris placeholder */
+}
+
+select:focus {
+    color: #111827;
+}
+
+select:valid {
+    color: #111827; /* negro cuando hay selección */
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .full-width {
+        grid-column: 1;
+    }
+
+    .add-btn {
+        right: 10px;
+        top: 36px;
+    }
+
+    .registro-form {
+        padding-right: 40px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-actions {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    .save-btn {
+        width: 100%;
+    }
+
+    .back-btn {
+        align-self: flex-start;
+    }
+}

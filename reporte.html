@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Reporte</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reporte.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="layout">
@@ -52,7 +53,7 @@
                 Cliente
             </a>
 
-            <a href="reporte.html" class="menu-item  active">
+            <a href="reporte.html" class="menu-item active">
                 <i class="fa-solid fa-chart-column"></i>
                 Reporte
             </a>
@@ -60,16 +61,13 @@
 
     </aside>
 
-
     <!-- CONTENIDO -->
     <main class="content">
 
         <!-- Header del contenido -->
-        <div class="content-header">
+        <div class="reporte-top-bar">
 
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-            <h2>REPORTE</h2>
 
             <div class="user-info">
                 <span>Juan Carlos</span>
@@ -79,13 +77,16 @@
             </div>
 
         </div>
+
+        <!-- Título-->
+        <h2 class="reporte-title">REPORTE</h2>
+
     </main>
     
     <script>
         function toggleMenu() {
             document.querySelector(".sidebar").classList.toggle("show");
         }
-
     </script>
 
 </body>
