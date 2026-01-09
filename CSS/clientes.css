@@ -1,9 +1,3 @@
-/* ========================================
-   CLIENTES.CSS
-   Estilos específicos para la página de clientes
-   Depende de: base.css
-======================================== */
-
 /* ===== BARRA SUPERIOR (USER INFO) ===== */
 .clientes-top-bar {
     display: flex;

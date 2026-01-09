@@ -1,9 +1,3 @@
-/* ========================================
-   REPORTE.CSS
-   Estilos específicos para la página de reportes
-   Depende de: base.css
-======================================== */
-
 /* ===== BARRA SUPERIOR (USER INFO) ===== */
 .reporte-top-bar {
     display: flex;

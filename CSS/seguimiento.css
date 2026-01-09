@@ -1,9 +1,3 @@
-/* ========================================
-   SEGUIMIENTO.CSS
-   Estilos específicos para la página de seguimiento
-   Depende de: base.css
-======================================== */
-
 /* ===== BARRA SUPERIOR (USER INFO) ===== */
 .seguimiento-top-bar {
     display: flex;
