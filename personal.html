@@ -106,8 +106,17 @@
                         <select required>
                             <option value="" selected disabled>Seleccionar rol</option>
                             <option value="Administrador">Administrador</option>
-                            <option value="Trabajador">Trabajador</option>
-                            <option value="Supervisor">Supervisor</option>
+                            <option value="Trabajador">Trabajador Lider</option>
+                            <option value="Supervisor">Trabajador</option>
+                        </select>
+                    </div>
+
+                    <div class="personal-form-group">
+                        <select required>
+                            <option value="" selected disabled>Seleccionar trabajador lider</option>
+                            <option value="Administrador">Administrador</option>
+                            <option value="Trabajador">Juan Lider 1</option>
+                            <option value="Supervisor">Marcos Lider 2</option>
                         </select>
                     </div>
 
@@ -140,6 +149,7 @@
                             <th>Nombre</th>
                             <th>Teléfono</th>
                             <th>Rol</th>
+                            <th>Trabajador Lider</th>
                             <th>DNI</th>
                             <th>Correo</th>
                             <th>Estado</th>
@@ -151,6 +161,7 @@
                             <td>1</td>
                             <td>-</td>
                             <td>956445725</td>
+                            <td>Administrador</td>
                             <td>Administrador</td>
                             <td>75036459</td>
                             <td>-</td>
@@ -168,7 +179,8 @@
                             <td>2</td>
                             <td>-</td>
                             <td>952584235</td>
-                            <td>Trabajador</td>
+                            <td>Trabajador Lider</td>
+                            <td>Administrador</td>
                             <td>27949584</td>
                             <td>-</td>
                             <td>Activo</td>
@@ -186,6 +198,7 @@
                             <td>-</td>
                             <td>918074725</td>
                             <td>Trabajador</td>
+                            <td>Juan lider 1</td>
                             <td>78354280</td>
                             <td>-</td>
                             <td>Activo</td>
@@ -203,6 +216,7 @@
                             <td>-</td>
                             <td>950874029</td>
                             <td>Trabajador</td>
+                            <td>Marcos Lider 2</td>
                             <td>26096 854</td>
                             <td>-</td>
                             <td>Activo</td>
@@ -215,23 +229,7 @@
                                 </button>
                             </td>
                         </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>Trabajador</td>
-                            <td>75075495</td>
-                            <td>-</td>
-                            <td>Inactivo</td>
-                            <td>
-                                <button class="personal-action-btn edit">
-                                    <i class="fa-solid fa-pen"></i>
-                                </button>
-                                <button class="personal-action-btn delete">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>
