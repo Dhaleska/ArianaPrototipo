@@ -26,7 +26,7 @@
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
-    align-items: center; /* AGREGADO */
+    align-items: center; 
 }
 
 .notificacion-filter-select,
@@ -45,9 +45,9 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    text-align: left; /* CAMBIADO de right a left */
-    margin-right: auto; /* AGREGADO - esto lo empuja al inicio */
-    order: -1; /* AGREGADO - esto lo coloca primero en el flex */
+    text-align: left;
+    margin-right: auto;
+    order: -1;
 }
 
 .notificacion-header-stats p {
